@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class Taller1_v1 extends Thread {
+public class Taller1_v2 implements Runnable{
 
 	int max;
 	int id;
 
-	public Taller1_v1(int id, int maximo) {
+	public Taller1_v2(int id, int maximo) {
 		this.max = maximo;
 		this.id = id;
 	}
@@ -39,11 +39,11 @@ public class Taller1_v1 extends Thread {
 	public static  void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		String i = sc.nextLine();
-		Taller1_v1 t0 = new Taller1_v1(0, Integer.parseInt(i));
-		Taller1_v1 t1 = new Taller1_v1(1, Integer.parseInt(i));
+		Thread t0 = new Thread(new Taller1_v2(0, Integer.parseInt(i)));
+		Thread t1 =  new Thread(new Taller1_v2(1, Integer.parseInt(i)));
 
 		t0.start();
 		t1.start();
+		sc.close();
 	}
-
 }
