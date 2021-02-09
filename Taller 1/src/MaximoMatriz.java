@@ -45,6 +45,21 @@ public class MaximoMatriz extends Thread {
 			}
 		}
 		
+		
+		anotar();
+	
+		
+		// Resultados
+		String msg = String.format("ID Thread %d - Maximo local actual: %d - Maximo global: %d",
+				this.idThread,
+				this.mayorFila,
+				mayor);
+		System.out.println(msg);
+	}
+	
+	
+	public synchronized void anotar()
+	{
 		if(this.mayorFila > mayor) {
 			try {
 				Thread.sleep(250);
@@ -64,16 +79,8 @@ public class MaximoMatriz extends Thread {
 					);
 			System.out.println(warn);
 		}
-		
-	
-		
-		// Resultados
-		String msg = String.format("ID Thread %d - Maximo local actual: %d - Maximo global: %d",
-				this.idThread,
-				this.mayorFila,
-				mayor);
-		System.out.println(msg);
 	}
+	
 	
 	public static void  main(String[] args) {
 		 System.out.println("Busqueda concurrente por una matriz");
