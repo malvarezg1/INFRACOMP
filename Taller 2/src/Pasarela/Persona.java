@@ -18,9 +18,10 @@ public class Persona extends Thread{
 		try {
 			pasarela.entrar(dir);
 			System.out.println("Persona "+ id + " - dir " + dir + " - Entra" );
-			sleep(100);
-			pasarela.salir(dir);
+			sleep(100); 
 			System.out.println("Persona "+ id + " - dir " + dir + " - Sale" );
+			pasarela.salir(dir);
+			
 		} catch (InterruptedException e) 
 		{
 			e.printStackTrace();

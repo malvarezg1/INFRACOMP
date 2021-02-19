@@ -8,13 +8,15 @@ public class Pasarela {
 	public synchronized void entrar(int dir) {
 		try {
 			if(dir == 0) {
-				while(personasD != 0)
+				while(personasD != 0) {
 					wait();
+				}
 				personasI++;
 			}
 			else {
-				while(personasI != 0)
+				while(personasI != 0) {
 					wait();
+				}
 				personasD++;
 			}
 		}catch(Exception e) {
@@ -38,8 +40,8 @@ public class Pasarela {
 				notifyAll();
 			}
 		}
-		
+
 	}
 
-	
+
 }
