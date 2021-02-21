@@ -18,9 +18,9 @@ public class Productor extends Thread {
 		
 		for(int i = 0; i < max_productos; i++) {
 			
-			Producto prod = new Producto('B');
+			Producto prod = new Producto('B', "Productor: " + id + " - Producto: " +i );
 			if(id % 2 == 0) {
-				 prod = new Producto('A');
+				 prod = new Producto('A', "Productor: " + id + " - Producto: " +  i);
 			}
 			
 			buffer.almacenar(prod);

@@ -2,6 +2,7 @@ package concurrencia;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class Main {
@@ -10,10 +11,10 @@ public class Main {
 	private int numProductos;
 	private int buzonesProd;
 	private int buzonesCons;
+	private ArrayList<Consumidor> consumidores;
 	
 	public Main() {
-
-
+		this.consumidores = new ArrayList<Consumidor>();
 	}
 
 	public static void main(String[] args) {
@@ -22,6 +23,7 @@ public class Main {
 			Main main = new Main();
 			main.leerProperties();
 			main.inicio();
+			main.reporte();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -34,6 +36,27 @@ public class Main {
 			Buffer buffer = new Buffer(buzonesProd);
 			Productor p = new Productor(i, buffer, numProductos);
 			p.start();
+		//}
+		
+		
+		//for (int i = 0; i < numProdCons; i++) {
+			//Buffer buffer = new Buffer(buzonesProd);
+			Consumidor c = new Consumidor (i, buffer, numProductos);
+			consumidores.add(c);
+			c.start();
+		}
+		
+	}
+	
+	public void reporte() {
+		for (int i = 0; i < numProdCons; i++) {
+			Consumidor c =consumidores.get(i);
+			System.out.println("Consumidor:" + c.getId());
+			ArrayList<Producto> productos= c.getConsumidos();
+			for (int j = 0; j < productos.size(); j++) {
+				System.out.println("\t " + productos.get(j).getRef());
+			}
+			
 		}
 		
 	}
