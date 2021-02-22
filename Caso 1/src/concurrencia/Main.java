@@ -88,7 +88,14 @@ public class Main {
 				System.out.println("\t " + productos.get(j).getRef());
 			}
 		}
-
+		for (int i = 0; i < numProdCons; i++) {
+			Productor p = productores.get(i);
+			System.out.println("Productor:" + p.getIdConsumidor());
+			ArrayList<Producto> productos= p.getProducidos();
+			for (int j = 0; j < productos.size(); j++) {
+				System.out.println("\t " + productos.get(j).getRef());
+			}
+		}
 	}
 
 
@@ -97,11 +104,16 @@ public class Main {
 		FileReader reader=new FileReader("./in.properties");  
 		Properties p=new Properties();  
 		p.load(reader);  
-
-		System.out.println(numProdCons = Integer.parseInt(p.getProperty("numProdCons")));  
-		System.out.println(numProductos = Integer.parseInt(p.getProperty("numProductos"))); 
-		System.out.println(buzonesProd = Integer.parseInt(p.getProperty("buzonesProd"))); 
-		System.out.println(buzonesCons = Integer.parseInt(p.getProperty("buzonesCons"))); 
+		numProdCons = Integer.parseInt(p.getProperty("numProdCons"));
+		numProductos = Integer.parseInt(p.getProperty("numProductos"));
+		buzonesProd = Integer.parseInt(p.getProperty("buzonesProd"));
+		buzonesCons = Integer.parseInt(p.getProperty("buzonesCons"));
+		
+		System.out.println("Numero Productores- Consumidores: " + numProdCons);  
+		System.out.println("Numero de Productos: " + numProductos); 
+		System.out.println("Cantidad Buzones Productores: " + buzonesProd); 
+		System.out.println("Cantidad Buzones Consumidores: "+ buzonesCons); 
+		System.out.println("----------------------------------------------------------");
 	}  
 
 
