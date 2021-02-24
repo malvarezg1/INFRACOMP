@@ -24,8 +24,13 @@ public class Main {
 		// TODO Auto-generated method stub
 		try {
 			Main main = new Main();
+			main.crearProperties();
 			main.leerProperties();
+
+	        long startTime = System.currentTimeMillis();
 			main.inicio();
+			long timeElapsed = System.currentTimeMillis() -startTime;
+			System.out.println("Execution time in millis  : " + timeElapsed);
 			main.reporte();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -81,14 +86,6 @@ public class Main {
 
 		System.out.println("----------------Reporte----------------");
 		for (int i = 0; i < numProdCons; i++) {
-			Consumidor c = consumidores.get(i);
-			System.out.println("Consumidor:" + c.getIdConsumidor());
-			ArrayList<Producto> productos= c.getConsumidos();
-			for (int j = 0; j < productos.size(); j++) {
-				System.out.println("\t " + productos.get(j).getRef());
-			}
-		}
-		for (int i = 0; i < numProdCons; i++) {
 			Productor p = productores.get(i);
 			System.out.println("Productor:" + p.getIdConsumidor());
 			ArrayList<Producto> productos= p.getProducidos();
@@ -96,6 +93,15 @@ public class Main {
 				System.out.println("\t " + productos.get(j).getRef());
 			}
 		}
+		for (int i = 0; i < numProdCons; i++) {
+			Consumidor c = consumidores.get(i);
+			System.out.println("Consumidor:" + c.getIdConsumidor());
+			ArrayList<Producto> productos= c.getConsumidos();
+			for (int j = 0; j < productos.size(); j++) {
+				System.out.println("\t " + productos.get(j).getRef());
+			}
+		}
+		
 	}
 
 
@@ -124,7 +130,7 @@ public class Main {
 		props.put("numProdCons", "4");
 		props.put("numProductos", "7");
 		props.put("buzonesProd", "3");
-		props.put("buzonesCons", "8");
+		props.put("buzonesCons", "6");
 		//Instantiating the FileInputStream for output file
 		String path = "C:/Users/Martin Alvarez/Documents/202110/INFRACOMP/INFRACOMP/Caso 1/in.properties";
 		FileOutputStream outputStrem = new FileOutputStream(path);
