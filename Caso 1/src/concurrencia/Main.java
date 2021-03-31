@@ -24,17 +24,26 @@ public class Main {
 		// TODO Auto-generated method stub
 		try {
 			Main main = new Main();
-			main.crearProperties();
+			//main.crearProperties();
 			main.leerProperties();
 
 	        long startTime = System.currentTimeMillis();
 			main.inicio();
 			long timeElapsed = System.currentTimeMillis() -startTime;
 			System.out.println("Execution time in millis  : " + timeElapsed);
+			main.imprimir();
 			main.reporte();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void imprimir() {
+		System.out.println("Numero Productores- Consumidores: " + numProdCons);  
+		System.out.println("Numero de Productos: " + numProductos); 
+		System.out.println("Cantidad Buzones Productores: " + buzonesProd); 
+		System.out.println("Cantidad Buzones Consumidores: "+ buzonesCons); 
+		System.out.println("----------------------------------------------------------");
 	}
 
 
@@ -127,12 +136,12 @@ public class Main {
 		///Instantiating the properties file
 		Properties props = new Properties();
 		//Populating the properties file
-		props.put("numProdCons", "4");
-		props.put("numProductos", "7");
-		props.put("buzonesProd", "3");
-		props.put("buzonesCons", "6");
+		props.put("numProdCons", "1");
+		props.put("numProductos", "1");
+		props.put("buzonesProd", "1");
+		props.put("buzonesCons", "1");
 		//Instantiating the FileInputStream for output file
-		String path = "C:/Users/Martin Alvarez/Documents/202110/INFRACOMP/INFRACOMP/Caso 1/in.properties";
+		String path = "./in.properties";
 		FileOutputStream outputStrem = new FileOutputStream(path);
 		//Storing the properties file
 		props.store(outputStrem, "This is a sample properties file");
