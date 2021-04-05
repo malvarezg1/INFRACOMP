@@ -27,7 +27,7 @@ public class Manejador extends Thread {
 			System.out.println("Pag R: " + paginaR);
 
 			if(paginaR < 0 ) {
-				System.out.println("Entro");
+				System.out.println("Fallo!!");
 				//Envejecimiento
 				fallos ++;
 				m.recuperarPagina(paginaV);
