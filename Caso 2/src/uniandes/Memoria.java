@@ -164,9 +164,9 @@ public class Memoria {
 	}
 
 	public void actualizarBitR(int i) {
-		System.out.println("R: " + Math.pow(2, (4*8)-3) );
+		System.out.println("R: " + Math.pow(2, 15) );
 		System.out.println("Sin R: " + i + " ContEnve: " + contadoresEnvej[i]);
-		contadoresEnvej[i] = contadoresEnvej[i] + (int) Math.pow(2, (4*8)-3);
+		contadoresEnvej[i] = contadoresEnvej[i] + (int) Math.pow(2, 15);
 		System.out.println("Con R: " + i + " ContEnve: " + contadoresEnvej[i]);
 
 	}
