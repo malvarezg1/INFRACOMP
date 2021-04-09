@@ -21,18 +21,14 @@ public class Productor extends Thread {
 
 
 	public void run() {
-
 		for(int i = 0; i < max_productos; i++) {
-
 			Producto prod = new Producto(tipo, "P" + id + "#" + i + "-" + tipo );
 			buffer.almacenarSemiActiva(prod);
 			if(prod != null) {
 				producidos.add(prod); 
 				System.out.println("Productor: " + id + " - Produjo: \t"+ prod.getRef() );	
 			}
-			
 		}
-
 	}
 
 	public int getIdConsumidor() {

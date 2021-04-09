@@ -22,11 +22,10 @@ public class Memoria {
 	private double nivelLocalidad;
 
 	//Estructuras de Datos
-	private Queue<Integer> secuencia;
-	private int[] tablaPaginas;
-	private int[] memoriaReal;
-	private int[] contadoresEnvej;
-	private Queue<Integer> colaReferencias;
+	private  Queue<Integer> secuencia;
+	private  int[] tablaPaginas;
+	private  int[] contadoresEnvej;
+	private  Queue<Integer> colaReferencias;
 
 	public Memoria() {
 		secuencia =  new LinkedList<>();
@@ -52,8 +51,7 @@ public class Memoria {
 
 			LRU envejecimiento = new LRU(m);
 			envejecimiento.start();
-
-
+			
 			manejador.join();
 			envejecimiento.join();
 
@@ -77,7 +75,7 @@ public class Memoria {
 
 	public void leerArchivoConfig(){
 		try {
-			File myObj = new File("./data/referencias2.txt");
+			File myObj = new File("./data/referencias1 .txt");
 			Scanner myReader = new Scanner(myObj);
 			int cont = 0;
 			while (myReader.hasNextLine()) {
@@ -105,7 +103,7 @@ public class Memoria {
 		System.out.println("Secuencia: "+ copia);
 	}
 
-	public int[] buscarPaginas()
+	public synchronized int[] buscarPaginas()
 	{
 		int paginaV =  secuencia.remove();
 		int paginaR = tablaPaginas[paginaV];
@@ -120,29 +118,33 @@ public class Memoria {
 	public void recuperarPagina(int pag) {
 		int min = 9999999;
 		int indiceMin = -1 ;
-		for (int i = 0; i < contadoresEnvej.length; i++) {
-			if(contadoresEnvej[i] <= min ) {
-				min = contadoresEnvej[i];
-				indiceMin = i;
+		synchronized (this) {
+			for (int i = 0; i < contadoresEnvej.length; i++) {
+				if(contadoresEnvej[i] <= min ) {
+					min = contadoresEnvej[i];
+					indiceMin = i;
+				}
 			}
 		}
-
 		System.out.println("Indice Min: " + indiceMin);
 
 		for (int j = 0; j < tablaPaginas.length; j++) {
 			if(tablaPaginas[j] == indiceMin )
 				tablaPaginas[j] = -1;
 		}
-		tablaPaginas[pag] = indiceMin; 
+		tablaPaginas[pag] = indiceMin;
+		synchronized (this) {
+			contadoresEnvej[indiceMin]= 0;
+		}
 		agregarColaReferencias(indiceMin);
-
+		System.out.println("Agrego a la cola la Pag: " + indiceMin );
 	}
 
-	public void agregarColaReferencias(int i ) {
+	public  synchronized void agregarColaReferencias(int i ) {
 		colaReferencias.add(i);
 	}
 
-	public int sacarColaReferencias() {
+	public  synchronized int sacarColaReferencias() {
 		return colaReferencias.remove();
 	}
 
@@ -150,25 +152,23 @@ public class Memoria {
 		return colaReferencias.isEmpty();
 	}
 
-	public boolean verificarSecuenciaVacia() {
+	public  synchronized boolean verificarSecuenciaVacia() {
 		return secuencia.isEmpty();
 	}
 
-	public void corrimientosDerecha() {
+	public  synchronized void corrimientosDerecha() {
 		for (int i = 0; i < contadoresEnvej.length; i++) {
 			System.out.println("Sin corrimiento: " + i + " ContEnve: " + contadoresEnvej[i]);
 			contadoresEnvej[i] = contadoresEnvej[i] >> 1;  
-		System.out.println("Con corrimiento: " + i + " ContEnve: " + contadoresEnvej[i]);
+			System.out.println("Con corrimiento: " + i + " ContEnve: " + contadoresEnvej[i]);
 		}
-
 	}
 
-	public void actualizarBitR(int i) {
+	public  synchronized void actualizarBitR(int i) {
 		System.out.println("R: " + Math.pow(2, 15) );
 		System.out.println("Sin R: " + i + " ContEnve: " + contadoresEnvej[i]);
 		contadoresEnvej[i] = contadoresEnvej[i] + (int) Math.pow(2, 15);
 		System.out.println("Con R: " + i + " ContEnve: " + contadoresEnvej[i]);
-
 	}
 
 }
