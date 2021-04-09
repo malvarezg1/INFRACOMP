@@ -58,9 +58,6 @@ public class Memoria {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-
-
 	}
 
 	public void inicializar() {
@@ -75,7 +72,7 @@ public class Memoria {
 
 	public void leerArchivoConfig(){
 		try {
-			File myObj = new File("./data/referencias1 .txt");
+			File myObj = new File("./data/referencias1.txt");
 			Scanner myReader = new Scanner(myObj);
 			int cont = 0;
 			while (myReader.hasNextLine()) {
@@ -116,11 +113,11 @@ public class Memoria {
 	}
 
 	public void recuperarPagina(int pag) {
-		int min = 9999999;
+		int min = (int) Math.pow(2, 31) ;
 		int indiceMin = -1 ;
 		synchronized (this) {
 			for (int i = 0; i < contadoresEnvej.length; i++) {
-				if(contadoresEnvej[i] <= min ) {
+				if(contadoresEnvej[i] < min ) {
 					min = contadoresEnvej[i];
 					indiceMin = i;
 				}
@@ -165,9 +162,9 @@ public class Memoria {
 	}
 
 	public  synchronized void actualizarBitR(int i) {
-		System.out.println("R: " + Math.pow(2, 15) );
+		System.out.println("R: " + Math.pow(2, 30) );
 		System.out.println("Sin R: " + i + " ContEnve: " + contadoresEnvej[i]);
-		contadoresEnvej[i] = contadoresEnvej[i] + (int) Math.pow(2, 15);
+		contadoresEnvej[i] = contadoresEnvej[i] + (int) Math.pow(2, 30);
 		System.out.println("Con R: " + i + " ContEnve: " + contadoresEnvej[i]);
 	}
 
