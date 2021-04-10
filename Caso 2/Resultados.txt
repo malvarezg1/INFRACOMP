@@ -1,0 +1,242 @@
+Secuencia: [1, 3, 0, 1, 7, 5, 6, 5, 14, 14, 5, 10, 9, 13, 12, 11]
+Marcos Pag. 4
+Num Pag. Proceso 16
+Nivel de Localidad 25.0
+Pag V: 1
+Pag R: -1
+Fallo!!
+Indice Min: 0
+Agrego a la cola la Pag: 0
+Sin corrimiento: 0 ContEnve: 0
+Con corrimiento: 0 ContEnve: 0
+Sin corrimiento: 1 ContEnve: 0
+Con corrimiento: 1 ContEnve: 0
+Sin corrimiento: 2 ContEnve: 0
+Con corrimiento: 2 ContEnve: 0
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 0 ContEnve: 0
+Con R: 0 ContEnve: 1073741824
+Pag V: 3
+Pag R: -1
+Fallo!!
+Indice Min: 1
+Agrego a la cola la Pag: 1
+Sin corrimiento: 0 ContEnve: 1073741824
+Con corrimiento: 0 ContEnve: 536870912
+Sin corrimiento: 1 ContEnve: 0
+Con corrimiento: 1 ContEnve: 0
+Sin corrimiento: 2 ContEnve: 0
+Con corrimiento: 2 ContEnve: 0
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 1 ContEnve: 0
+Con R: 1 ContEnve: 1073741824
+Pag V: 0
+Pag R: -1
+Fallo!!
+Indice Min: 2
+Agrego a la cola la Pag: 2
+Sin corrimiento: 0 ContEnve: 536870912
+Con corrimiento: 0 ContEnve: 268435456
+Sin corrimiento: 1 ContEnve: 1073741824
+Con corrimiento: 1 ContEnve: 536870912
+Sin corrimiento: 2 ContEnve: 0
+Con corrimiento: 2 ContEnve: 0
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 2 ContEnve: 0
+Con R: 2 ContEnve: 1073741824
+Pag V: 1
+Pag R: 0
+Agrego a la cola la Pag: 0
+Sin corrimiento: 0 ContEnve: 268435456
+Con corrimiento: 0 ContEnve: 134217728
+Sin corrimiento: 1 ContEnve: 536870912
+Con corrimiento: 1 ContEnve: 268435456
+Sin corrimiento: 2 ContEnve: 1073741824
+Con corrimiento: 2 ContEnve: 536870912
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 0 ContEnve: 134217728
+Con R: 0 ContEnve: 1207959552
+Pag V: 7
+Pag R: -1
+Fallo!!
+Indice Min: 3
+Agrego a la cola la Pag: 3
+Sin corrimiento: 0 ContEnve: 1207959552
+Con corrimiento: 0 ContEnve: 603979776
+Sin corrimiento: 1 ContEnve: 268435456
+Con corrimiento: 1 ContEnve: 134217728
+Sin corrimiento: 2 ContEnve: 536870912
+Con corrimiento: 2 ContEnve: 268435456
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 3 ContEnve: 0
+Con R: 3 ContEnve: 1073741824
+Pag V: 5
+Pag R: -1
+Fallo!!
+Indice Min: 1
+Agrego a la cola la Pag: 1
+Sin corrimiento: 0 ContEnve: 603979776
+Con corrimiento: 0 ContEnve: 301989888
+Sin corrimiento: 1 ContEnve: 0
+Con corrimiento: 1 ContEnve: 0
+Sin corrimiento: 2 ContEnve: 268435456
+Con corrimiento: 2 ContEnve: 134217728
+Sin corrimiento: 3 ContEnve: 1073741824
+Con corrimiento: 3 ContEnve: 536870912
+R: 1.073741824E9
+Sin R: 1 ContEnve: 0
+Con R: 1 ContEnve: 1073741824
+Pag V: 6
+Pag R: -1
+Fallo!!
+Indice Min: 2
+Agrego a la cola la Pag: 2
+Sin corrimiento: 0 ContEnve: 301989888
+Con corrimiento: 0 ContEnve: 150994944
+Sin corrimiento: 1 ContEnve: 1073741824
+Con corrimiento: 1 ContEnve: 536870912
+Sin corrimiento: 2 ContEnve: 0
+Con corrimiento: 2 ContEnve: 0
+Sin corrimiento: 3 ContEnve: 536870912
+Con corrimiento: 3 ContEnve: 268435456
+R: 1.073741824E9
+Sin R: 2 ContEnve: 0
+Con R: 2 ContEnve: 1073741824
+Pag V: 5
+Pag R: 1
+Agrego a la cola la Pag: 1
+Sin corrimiento: 0 ContEnve: 150994944
+Con corrimiento: 0 ContEnve: 75497472
+Sin corrimiento: 1 ContEnve: 536870912
+Con corrimiento: 1 ContEnve: 268435456
+Sin corrimiento: 2 ContEnve: 1073741824
+Con corrimiento: 2 ContEnve: 536870912
+Sin corrimiento: 3 ContEnve: 268435456
+Con corrimiento: 3 ContEnve: 134217728
+R: 1.073741824E9
+Sin R: 1 ContEnve: 268435456
+Con R: 1 ContEnve: 1342177280
+Pag V: 14
+Pag R: -1
+Fallo!!
+Indice Min: 0
+Agrego a la cola la Pag: 0
+Sin corrimiento: 0 ContEnve: 0
+Con corrimiento: 0 ContEnve: 0
+Sin corrimiento: 1 ContEnve: 1342177280
+Con corrimiento: 1 ContEnve: 671088640
+Sin corrimiento: 2 ContEnve: 536870912
+Con corrimiento: 2 ContEnve: 268435456
+Sin corrimiento: 3 ContEnve: 134217728
+Con corrimiento: 3 ContEnve: 67108864
+R: 1.073741824E9
+Sin R: 0 ContEnve: 0
+Con R: 0 ContEnve: 1073741824
+Pag V: 14
+Pag R: 0
+Agrego a la cola la Pag: 0
+Sin corrimiento: 0 ContEnve: 1073741824
+Con corrimiento: 0 ContEnve: 536870912
+Sin corrimiento: 1 ContEnve: 671088640
+Con corrimiento: 1 ContEnve: 335544320
+Sin corrimiento: 2 ContEnve: 268435456
+Con corrimiento: 2 ContEnve: 134217728
+Sin corrimiento: 3 ContEnve: 67108864
+Con corrimiento: 3 ContEnve: 33554432
+R: 1.073741824E9
+Sin R: 0 ContEnve: 536870912
+Con R: 0 ContEnve: 1610612736
+Pag V: 5
+Pag R: 1
+Agrego a la cola la Pag: 1
+Sin corrimiento: 0 ContEnve: 1610612736
+Con corrimiento: 0 ContEnve: 805306368
+Sin corrimiento: 1 ContEnve: 335544320
+Con corrimiento: 1 ContEnve: 167772160
+Sin corrimiento: 2 ContEnve: 134217728
+Con corrimiento: 2 ContEnve: 67108864
+Sin corrimiento: 3 ContEnve: 33554432
+Con corrimiento: 3 ContEnve: 16777216
+R: 1.073741824E9
+Sin R: 1 ContEnve: 167772160
+Con R: 1 ContEnve: 1241513984
+Pag V: 10
+Pag R: -1
+Fallo!!
+Indice Min: 3
+Agrego a la cola la Pag: 3
+Sin corrimiento: 0 ContEnve: 805306368
+Con corrimiento: 0 ContEnve: 402653184
+Sin corrimiento: 1 ContEnve: 1241513984
+Con corrimiento: 1 ContEnve: 620756992
+Sin corrimiento: 2 ContEnve: 67108864
+Con corrimiento: 2 ContEnve: 33554432
+Sin corrimiento: 3 ContEnve: 0
+Con corrimiento: 3 ContEnve: 0
+R: 1.073741824E9
+Sin R: 3 ContEnve: 0
+Con R: 3 ContEnve: 1073741824
+Pag V: 9
+Pag R: -1
+Fallo!!
+Indice Min: 2
+Agrego a la cola la Pag: 2
+Sin corrimiento: 0 ContEnve: 402653184
+Con corrimiento: 0 ContEnve: 201326592
+Sin corrimiento: 1 ContEnve: 620756992
+Con corrimiento: 1 ContEnve: 310378496
+Sin corrimiento: 2 ContEnve: 0
+Con corrimiento: 2 ContEnve: 0
+Sin corrimiento: 3 ContEnve: 1073741824
+Con corrimiento: 3 ContEnve: 536870912
+R: 1.073741824E9
+Sin R: 2 ContEnve: 0
+Con R: 2 ContEnve: 1073741824
+Pag V: 13
+Pag R: -1
+Fallo!!
+Indice Min: 0
+Agrego a la cola la Pag: 0
+Sin corrimiento: 0 ContEnve: 0
+Con corrimiento: 0 ContEnve: 0
+Sin corrimiento: 1 ContEnve: 310378496
+Con corrimiento: 1 ContEnve: 155189248
+Sin corrimiento: 2 ContEnve: 1073741824
+Con corrimiento: 2 ContEnve: 536870912
+Sin corrimiento: 3 ContEnve: 536870912
+Con corrimiento: 3 ContEnve: 268435456
+R: 1.073741824E9
+Sin R: 0 ContEnve: 0
+Con R: 0 ContEnve: 1073741824
+Pag V: 12
+Pag R: -1
+Fallo!!
+Indice Min: 1
+Agrego a la cola la Pag: 1
+Sin corrimiento: 0 ContEnve: 1073741824
+Con corrimiento: 0 ContEnve: 536870912
+Sin corrimiento: 1 ContEnve: 0
+Con corrimiento: 1 ContEnve: 0
+Sin corrimiento: 2 ContEnve: 536870912
+Con corrimiento: 2 ContEnve: 268435456
+Sin corrimiento: 3 ContEnve: 268435456
+Con corrimiento: 3 ContEnve: 134217728
+R: 1.073741824E9
+Sin R: 1 ContEnve: 0
+Con R: 1 ContEnve: 1073741824
+Pag V: 11
+Pag R: -1
+Fallo!!
+Indice Min: 3
+Agrego a la cola la Pag: 3
+Num Fallas: 12

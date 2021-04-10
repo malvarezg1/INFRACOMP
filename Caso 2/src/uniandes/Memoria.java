@@ -35,9 +35,14 @@ public class Memoria {
 	public static void main(String[] args) {
 		PrintStream fileStream;
 		try {
-			fileStream = new PrintStream("filename.txt");
+			/*
+			GeneracionPruebas g = new GeneracionPruebas();
+			g.GenPruebas();
+			
+			*/
+			fileStream = new PrintStream("Resultados.txt");
 			System.setOut(fileStream);
-
+			
 			Memoria m = new Memoria();
 			m.leerArchivoConfig();
 			System.out.println("Marcos Pag. " + m.numMarcos);
@@ -54,6 +59,7 @@ public class Memoria {
 			
 			manejador.join();
 			envejecimiento.join();
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -72,7 +78,7 @@ public class Memoria {
 
 	public void leerArchivoConfig(){
 		try {
-			File myObj = new File("./data/referencias1.txt");
+			File myObj = new File("./data/referencias4_16.txt");
 			Scanner myReader = new Scanner(myObj);
 			int cont = 0;
 			while (myReader.hasNextLine()) {
