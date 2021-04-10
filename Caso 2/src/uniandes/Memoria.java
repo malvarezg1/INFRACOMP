@@ -72,7 +72,7 @@ public class Memoria {
 
 	public void leerArchivoConfig(){
 		try {
-			File myObj = new File("./data/referencias1.txt");
+			File myObj = new File("./data/referencias4.txt");
 			Scanner myReader = new Scanner(myObj);
 			int cont = 0;
 			while (myReader.hasNextLine()) {
