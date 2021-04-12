@@ -35,6 +35,7 @@ public class Memoria {
 	public static void main(String[] args) {
 		PrintStream fileStream;
 		try {
+			//Si se descomenta este metodo se activa la generacion de las pruebas
 			/*
 			GeneracionPruebas g = new GeneracionPruebas();
 			g.GenPruebas();

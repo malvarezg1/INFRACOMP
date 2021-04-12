@@ -10,7 +10,7 @@ public class GeneracionPruebas {
 
 
 	public void GenPruebas() {
-
+		
 		int b = 1;
 		int marcos = 8;
 		double i = 0.6;
