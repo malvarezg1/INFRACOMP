@@ -14,10 +14,7 @@ public class PasswordCracker {
 
  public static char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".toCharArray();
  public static final int PASSWORD_MAX_LENGTH = 7;
- //public static final String PASSWORD_SHA_256_TO_FIND = "8c9713d70976a2d1ea0c07a6d70998dc7da3ebca901f5b55cce470191bc86332";
- //public static final byte[] BYTES_SHA_256_TO_FIND = PasswordCracker.hexStringToByteArray(PASSWORD_SHA_256_TO_FIND);
  public static long START_TIME;
- 
  
  public static int numCeros = 24/4;
  public final static String CADENA_INICIAL = "cadena inicial abc";
@@ -34,8 +31,6 @@ public class PasswordCracker {
   return data;
  }
  
- 
-
  public static void main(String[] args) throws NoSuchAlgorithmException {
   int cores = Runtime.getRuntime().availableProcessors();
   int lengthSet = PASSWORD_MAX_LENGTH / cores; // Cuantos dígitos le asigno a cada core
