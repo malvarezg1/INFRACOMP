@@ -42,7 +42,7 @@ class Validador implements Runnable {
 		    StringBuilder a1 = new StringBuilder();
 		    StringBuilder a2 = new StringBuilder();
 		    
-		    for (int i = 0; i < Prototipo.numCeros/2; i++) {
+		    for (int i = 0; i < (Prototipo.numCeros/2)+1; i++) {
 		        a1.append(String.format("%02X", bytes1[i]));
 		        a2.append(String.format("%02X", bytes2[i]));
 			}
@@ -86,6 +86,9 @@ class Validador implements Runnable {
 
 		if (DONE) {
 			long duration = System.currentTimeMillis() - Prototipo.START_TIME;
+			if(found != null) {
+				Prototipo.found = found;
+			}
 			System.out.println("Cadena encontrada en  " + TimeUnit.MILLISECONDS.toSeconds(duration) + "." + TimeUnit.MILLISECONDS.toMillis(duration) + " segundos. La cadena fue = " + found);
 		} else {
 			System.out.println("Cadena no encontrada para set de [" + start + ", " + end + "] caracteres");
