@@ -67,7 +67,7 @@ public class Prototipo {
 		
 		
 		try {
-			if(executorService.awaitTermination(3, TimeUnit.HOURS)){
+			if(executorService.awaitTermination(7, TimeUnit.HOURS)){
 				long fin = System.currentTimeMillis();
 				System.out.println("\n");
 				System.out.println("La cadena de inicial utilizada fue: " + CADENA_INICIAL);
